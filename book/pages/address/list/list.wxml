@@ -1,0 +1,25 @@
+<view class='addressList'>
+  <view wx:for="{{address}}" wx:key="{{item.address_id}}" class='item'>
+    <view class='address'>
+      <view class='contact'>
+        <text class='shr'>{{item.user_name}}</text>
+        <text class="mobile">电话：{{item.phone}}</text>
+      </view>
+      <view class='addressInfo'>
+        <text>{{item.address}}</text>
+      </view>
+    </view>
+    <view class='opration'>
+      <view class='left'>
+        <icon wx:if="{{item.deafult == 1}}" type='success_circle'></icon>
+        <icon bindtap='setDeafult' data-index = "{{index}}" wx:else type='circle'></icon>
+        <text>默认地址</text>
+      </view>
+      <view class='right'>
+        <view class='edit' bindtap='navToEditAddress' data-index = "{{index}}" >编辑</view>
+        <view bindtap='delAddress' data-index = "{{index}}" class='del'>删除</view>
+      </view>
+    </view>
+  </view>
+<button bindtap='navToAddAddress' type="warn" class='addButton'> 添加收货地址 </button>
+</view>

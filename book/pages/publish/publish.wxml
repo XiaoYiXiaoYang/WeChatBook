@@ -1,0 +1,16 @@
+<!--pages/publish/publish.wxml-->
+<view>
+  <scroll-view class="image-group" scroll-x="true">
+    <image src='../imgs/public_scroll1.jpg'></image>
+    <image src='../imgs/public_scroll2.jpg'></image>
+    <image src='../imgs/public_scroll3.jpg'></image>
+  </scroll-view>
+</view>
+<view class='view_buttons'>
+  <button class='button button-action button-box button-giant button-longshadow-left' bindtap='ask'>
+    求得二手好书
+  </button>
+  <button class='button button-highlight button-box button-giant button-longshadow-right button-longshadow-expand' bindtap='publish'>
+    发布闲置书籍
+  </button>
+</view>
