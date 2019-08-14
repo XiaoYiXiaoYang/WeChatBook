@@ -1,0 +1,10 @@
+<view class="custom-class sign sign--{{type}}">
+  <block wx:if="{{color}}">
+    <view class="sign__left" style="background: {{ color }}; border-color: {{ color }}">{{ leftText }}</view>
+    <view class="sign__right" style="color: {{ color }}; border-color: {{ color }}">{{ rightText }}</view>
+  </block>
+  <block wx:else>
+    <view class="sign__left">{{ leftText }}</view>
+    <view class="sign__right">{{ rightText }}</view>
+  </block>
+</view>

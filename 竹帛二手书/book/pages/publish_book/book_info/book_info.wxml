@@ -1,0 +1,45 @@
+<view class='book_container'>
+  <!-- 顶部书籍图面滑动栏 -->
+  <swiper class='book_image_swiper' indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{book.images}}">
+      <image src='{{img_url}}{{item}}'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class='book_information'>
+  	
+    <view class='book_title'>{{book.title}}</view>
+    <view class='book_author'>{{book.author}}</view>
+    <view class='book_price'>
+      <view class='prePrice'>原价：{{book.price}}</view>
+      <view class='price'>现价：{{book.prePrice}}</view>
+    </view>
+    <view class='book_types'>
+      <view class='type'>{{typearray1[book.type1]}}</view>
+      <view class='type'>{{typearray2[book.type2]}}</view>
+    </view>
+    <view class='trans_box'>
+      <image class='trans' src='' mode='aspected'></image>
+      <view class='trans_method'>{{book.transMethod}}</view>
+    </view>
+    <view class='book_detail'>{{book.detail}}</view>
+  </view>
+  <!-- 底部收藏/立即购买 -->
+  <view class='book_bottom'>
+    <view class='collect_box'>
+      <!-- openCollect跳转到收藏页面 -->
+      <view class='image_chat'>
+        <button open-type='contact'>
+          <image bindtap='openChat' src=''></image>
+        </button>
+      </view>
+      <view class='image_love'>
+        <image wx:if='{{if_love}}' bindtap='openCollect' src=''></image>
+        <image wx:if='{{!if_love}}' bindtap='openCollect' src=''></image>
+      </view>
+      <view class='addToCollect' wx:if='{{!if_love}}' bindtap="addToCollect">加入收藏</view>
+      <view class='ToBuy' wx:if='{{!if_sale}}' bindtap='addToOrder'>立即购买</view>
+      <view class='soldOut' wx:if='{{if_sale}}'>商品已售空</view>
+    </view>
+  </view>
+</view>

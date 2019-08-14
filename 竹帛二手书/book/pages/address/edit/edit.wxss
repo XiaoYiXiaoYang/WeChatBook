@@ -1,0 +1,17 @@
+.address{
+  font-size: 16px;
+  color:#999;
+  padding: 15px;
+}
+.listRow{
+  display: flex;
+  margin-top: 15px;
+}
+.listRow input{
+  flex: 1;
+  border:1px solid #eee;
+}
+.addButton{
+  margin-top: 20px;
+  width: 88%;
+}

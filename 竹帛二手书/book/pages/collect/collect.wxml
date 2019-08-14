@@ -1,0 +1,25 @@
+<view class='outer'>
+  <view class='emptycart' wx:if="{{dataEmpty}}">
+  
+    <text>您还没有收藏物品</text>
+    <text class='buybtn' bindtap='jumpIndex'>去逛逛</text>
+  </view>
+  <scroll-view wx:else scroll-y style="height:{{ scrollHeight }}px;">
+    <view class='cartList'>
+
+      <view class='item' wx:for = "{{goodsCollect}}" wx:key = "{{item.book_id}}">
+     
+        <view class='thumb'><image  mode='widthFix' src="{{img_src}}{{item.img_src}}"></image></view>
+        <view class='goodsPrice'>￥:{{item.pre_price}} 元</view>
+        <view class='tptitle'>
+          <text class='title'>{{item.book_name}}</text>
+          
+          <icon type='clear' bindtap='delCartGoods'  data-index = "{{index}}" size='20'></icon>
+        </view>
+       
+      </view>
+
+    </view>
+  </scroll-view>
+ 
+</view>

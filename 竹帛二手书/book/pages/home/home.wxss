@@ -1,0 +1,235 @@
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+/* 搜索框样式 */
+.search
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:70%;
+  height:60rpx;
+  background-color:whitesmoke;
+  margin-top: 5%;
+  border:1rpx solid whitesmoke;
+  border-radius: 5rpx;
+
+}
+
+/* 搜索框提示文字样式 */
+.search input
+{
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+
+/* 搜索框小图标 */
+.search image
+{ 
+  width:40rpx;
+  height:40rpx;
+  padding-right:20rpx;
+}
+
+
+/*最新推荐*/
+.homeRecommend {
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+  color: #293539;
+  font-weight: 300;
+  position: relative;
+  text-align: center;
+}
+.homeMark{
+  margin-left: 50rpx;
+  color: #293539;
+  font-size: 36rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  width: 350rpx;
+  border-bottom: 1rpx solid #a78845;
+}
+.homeSwiper swiper {
+  width: 100%;
+  height: 800rpx;
+}
+.swiperBox image{
+  width: 100%;
+  height: 520rpx;
+  background-color: #f5f5f5;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.swiperBox{
+  width: 520rpx;
+  margin: 0 auto;
+  position: relative;
+  height: 700rpx;
+  box-shadow: 0px 10rpx 30rpx 0px #cfc9ca;
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+}
+.swiperDetail{
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+  top: 520rpx;
+  background-color: #fff;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.swiperDetail .title{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  margin-left: 35rpx;
+  color: #293539;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.allPrice{
+  width: 90%;
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.allPrice .price{
+  width: 50%;
+  font-size: 30rpx;
+}
+
+.allPrice .prePrice {
+  width: 50%;
+  text-decoration: line-through;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.swiper-box-info .introduction {
+  font-size: 24rpx;
+  color: #a78845;
+}
+
+
+/*全部*/
+/* compontents/homeHot/homeHot.wxss */
+.section {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.section .header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 130rpx;
+}
+
+.section .header .title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF6600;
+  height: 75rpx;
+}
+
+.section .header .txt {
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  height: 75rpx;
+  color: #fff;
+  font-size: 33rpx;
+}
+.body {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.section .body .item {
+  border-top: 1px solid #d9d9d9;
+  margin: 0 20rpx;
+  height: 244rpx;
+  width: 710rpx;
+}
+.section .body .image{
+  margin-top: 12rpx;
+  margin-right: 12rpx;
+  float: left;
+  width: 220rpx;
+  height: 220rpx;
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.detailHeader{
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.title{
+  width: 40%;
+  color: #333;
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+
+.signBox {
+  padding-right: 20rpx;
+  padding-top: 8rpx;
+  margin: 10rpx;
+}
+.sign{
+  margin-left: 10px;
+}
+.author{
+  width: 476rpx;
+  color: rgb(41, 40, 40);
+  line-height: 50rpx;
+  font-size: 25rpx;
+}
+.section .body .allPrice {
+  width: 476rpx;
+  display: flex;
+  color: #b4282d;
+  line-height: 50rpx;
+  font-size: 33rpx;
+}
+
+.section .body .prePrice {
+  text-decoration: line-through;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.section .body .price {
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #a78845;
+}
+

@@ -1,0 +1,33 @@
+<!--求购页面-->
+  <view class='section'>
+    <view class='header'>
+      <view class='title'>
+        <navigator url=''>
+          <text class='txt'>求购</text>
+        </navigator>
+      </view>
+    </view>
+    <view class='body'>
+      <view  wx:for="{{asks}}" class='item' wx:key="{{item.ask_id}}">
+        <navigator bindtap="show_ask_info" data-index = "{{index}}">
+          <image class='image'src='{{image_url}}{{item.img}}'></image>
+          <view class='detail'>
+              <view class='detailHeader'>
+                <view class="title">{{item.ask_title}}</view>
+                <view class="signBox">
+                  <sign color="#a78845" leftText="类型" rightText="{{item.type}}"></sign>
+                </view>
+              </view>
+              <view class='detailBoay'>
+                <view class='author'>{{item.ask_desc}}</view>
+                <view class='allPrice'>
+                  <view class="prePrice"></view>
+                  <view class="price"></view>
+                </view>
+              </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+<!--求购页面结束-->

@@ -1,0 +1,124 @@
+page{
+  height: 100%;
+  width: 100%;
+}
+.outer{
+  height: 100%;
+  width: 100%;
+}
+.emptycart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+.emptycart image{
+  width: 128px;
+  height: 128px;
+}
+.emptycart text{
+  display: block;
+  font-size: 14px;
+  color: #bfbfbf;
+  padding: 20px;
+}
+.buybtn{
+  width: 500rpx;
+  padding: 10px 0 !important;
+  background-color: #ff9801;
+  color: #fff !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10rpx;
+}
+.item{
+  display: flex;
+  height: 80px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.thumb image{
+  width: 80px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+}
+.tb{
+  display: flex;
+  align-items: center;
+}
+.tptitle{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+/* 商品数量控制组件 */
+.goodsnum{
+  height: 50rpx;
+  width: 160rpx;
+  border:1px solid #ccc;
+  border-radius: 10rpx;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.goodsnum input{
+  text-align: center;
+  line-height: 30rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  color: #666;
+  font-size: 14px;
+}
+.minus{
+  padding: 0 10rpx;
+  line-height: 46rpx;
+  color: #666;
+}
+.plus{
+  padding: 0 6rpx;
+  line-height: 46rpx;
+  color: #666;
+}
+.disabled{
+  color: #ccc;
+}
+.buyinfo{
+  display: flex;
+  flex: 5;
+  height: 51px;
+  border-top: 1px solid #ccc;
+}
+.buyinfo-left{
+  display: flex;
+  flex: 3;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+.checkall{
+  margin: 0 10px;
+}
+.buyinfo-right{
+  display: flex;
+  flex: 2;
+  background-color: #ff9801;
+  color: #fff;
+  align-items: center;
+  justify-content: space-around;
+}
+.goodsPrice{
+  position: absolute;
+  right: 330rpx;
+  bottom: 10px;
+  color: #ff9801;
+  font-size: 14px;
+}
+.totalPrice{
+  padding: 0 10px;
+  color: #ff9801;
+  font-weight: bold;
+}

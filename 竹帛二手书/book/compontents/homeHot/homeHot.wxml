@@ -1,0 +1,31 @@
+<view class='section'>
+  <view class='header'>
+    <view class='title'>
+      <navigator url='/pages/'>
+        <text class='txt'>求购信息</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='item' wx:key="{{books}}">
+      <navigator url=''>
+        <image class='image'src='{{item.image}}'></image>
+        <view class='detail'>
+            <view class='detailHeader'>
+              <view class="title">{{item.title}}</view>
+              <view class="signBox">
+                <sign color="#a78845" leftText="类型" rightText="{{item.type}}"></sign>
+              </view>
+            </view>
+            <view class='detailBoay'>
+              <view class='author'>{{item.author}}</view>
+              <view class='allPrice'>
+                <view class="prePrice">{{item.prePrice}}</view>
+                <view class="price">{{item.price}}</view>
+              </view>
+            </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

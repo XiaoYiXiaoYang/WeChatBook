@@ -1,0 +1,139 @@
+/* pages/publish_book/input_book/input_book.wxss */
+.planA{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(213, 210, 193, 0.21);
+  width: 95%;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.search input{
+  width: 85%;
+  border: 2rpx solid #D5D2C1;
+  border-radius: 10rpx;
+  margin: 5rpx;
+  font-size: 30rpx;
+  font-weight: 200;
+  color:rgba(105, 73, 26, 0.704);
+}
+button{
+  background: none;
+}
+button::after{ 
+  border: none; 
+}
+.search_button,.sao{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0;
+  padding: 5rpx;
+}
+.pink_search,.green_sao{
+  width: 50rpx;
+  height: 50rpx;
+}
+.planC{
+  background-color: rgba(105, 73, 26, 0.892);
+  margin: 5rpx;
+  padding: 0 5rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.c_header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.pen_write{
+  font-size: 24rpx;
+  font-weight: 300;
+  margin: 10rpx;
+  width: 90%;
+  text-align: left;
+}
+.form_footer{
+  width: 95%;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.form_footer label{
+  font-size: 32rpx;
+  font-weight: 50;
+  color: rgba(105, 73, 26, 0.904);
+}
+.form_footer input{
+  font-size: 30rpx;
+  font-weight: 100;
+  margin-left: 20rpx; 
+  background-color: rgba(105, 73, 26, 0.0504);
+  width: 85%;
+  border-radius:10rpx; 
+  color: rgba(105, 73, 26, 0.704);
+  padding: 10rpx;
+}
+.type_choices label{
+  margin: 10rpx;
+}
+.title{
+  font-size:34rpx;
+  color: rgba(105, 73, 26, 0.904);
+  text-align: center;
+  margin:10rpx;
+}
+.item{
+  width: 18%;
+  border:1rpx solid  rgba(105, 73, 26, 0.504);
+  text-align: center;
+  font-size: 28rpx;
+  margin:10rpx;
+  color: rgba(105, 73, 26, 0.504);
+  border-radius: 10rpx;
+}
+.content_input{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: norow;
+  align-items: center;
+  margin: 10rpx;
+}
+.reset_button,.submit_button{
+  width: 100rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reset_button image,.submit_button image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.form_button{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(105, 73, 26, 0.0904);
+}
+.button_detial{
+  font-size: 30rpx;
+  color: rgba(105, 73, 26, 0.504);
+  justify-content: space-around;
+  width: 100%;
+}

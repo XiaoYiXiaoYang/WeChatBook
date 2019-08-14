@@ -1,0 +1,164 @@
+/* pages/publish_book/book_info/book_info.wxss */
+.book_container{
+  margin-bottom: 100rpx;
+}
+.book_image_swiper{
+  width: 650rpx;
+  height: 650rpx;
+}
+.book_image_swiper image{
+  width:650rpx;
+  height:650rpx;
+}
+.book_information{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.book_title{
+  color:#b8572a;
+}
+.book_author{
+  color: #454745;
+  font-size: 28rpx;
+}
+.book_types{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.type{
+  border: 4rpx solid #b8572a;
+  border-radius:10rpx;
+  padding: 3rpx 18rpx; 
+  font-size: 28rpx;
+  font-weight: 800;
+  color: #5c615c;
+  margin: 10rpx;
+}
+.book_price{
+  width: 476rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.prePrice{
+  text-decoration: line-through;
+  font-size: 28rpx;
+  color: #999;
+}
+.price {
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #b8572a;
+}
+.trans_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.trans{
+  width:50rpx;
+  height:50rpx;
+  margin: 20rpx;
+}
+.trans_method{
+  font-size: 32rpx;
+  color: #5c615c;
+}
+.book_detail{
+  color: #5c615c;
+  font-size: 32rpx;
+  border:1rpx solid #f4f4f4;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  padding: 40rpx;
+}
+/*底部样式*/
+.book_bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 750rpx;
+  height: 100rpx;
+  background: #fff;
+}
+.collect_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  background-color: #fff;
+  border-radius: 0;
+  width: 100rpx;
+  display: flex;
+  padding: 10rpx;
+}
+button::after{
+  border: none;
+}
+.image_love{
+  width:100rpx;
+  height: 100rpx;
+}
+.image_love image{
+  width:100rpx;
+  height:100rpx;
+}
+.image_love,.image_chat{
+  float: left;
+  height: 100rpx;
+  border: 1px solid #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image_chat image{
+  width:81rpx;
+  height:50rpx;
+}
+.image_love image{
+  width:70rpx;
+  height:70rpx;
+}
+.love-count {
+  height: 28rpx;
+  width: 28rpx;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #a78845;
+  text-align: center;
+  font-size: 18rpx;
+  color: #fff;
+  line-height: 28rpx;
+  border-radius: 50%;
+}
+.ToBuy{
+  border: 1px solid #a78845;
+  background: #a78845;
+  float: left;
+  height: 100rpx;
+  line-height: 96rpx;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+.addToCollect,.soldOut{
+  border: 1px solid #d3bd8f;
+  background: #d3bd8f;
+  float: left;
+  height: 100rpx;
+  line-height: 96rpx;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}

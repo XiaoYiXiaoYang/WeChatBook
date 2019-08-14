@@ -1,0 +1,105 @@
+
+<view class="fixed-page">
+  <view class="fixed-cont-body">
+  <!-- 顶部书籍图面滑动栏 -->
+  <view class='img' wx:if="{{ask.images}}"> 
+  <swiper class='book_image_swiper' indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{ask.images}}">
+      <image src='{{img_url}}{{item}}'></image>
+    </swiper-item>
+  </swiper>
+  </view>
+    <scroll-view wx:for="{{ask}}" wx:for-item="item" scroll-y="true" class="main">
+      <view>
+        <!-- 诗词信息 -->
+        <view class="author-box row">
+          <view class="title">标题:</view>
+          <view class="author">{{ask.title}}</view>
+        </view>
+        <!-- 详情描述 -->
+        <view class="discription-box row">
+          <view class="title">内容:</view>
+          <view class="discription">{{ask.desc}}</view>
+        </view>
+      </view>
+ 
+ 
+      <!-- 图文信息 -->
+      <view wx:if="{{comment.length>0}}" class="photo_info_box">
+        <!-- 图文评论列表 -->
+        <view class="photo_comment_box">
+          <text class="photo_comment_title">最新评论</text>
+          <view wx:for="{{comment}}" wx:for-item="comment" wx:key="index" class="commment_list">
+            <!-- index < 3 在视频下面只显示三条记录 -->
+            <view wx:if="{{index < 2}}">
+              <view class="comment_info">
+                <view class="c_info_view">
+                  <image src="{{comment.head_src}}"></image>
+                  <text>{{comment.nick_name}}</text>
+                </view>
+                <text class="c_date_txt">{{comment.comment_time}}</text>
+              </view>
+              <view class="comment_content">{{comment.content}}</view>
+            </view>
+          </view>
+ 
+          <!-- 查看更多评论 -->
+          <view bindtap="toggleDialogHandle">
+            <view class="load_more_box">查看更多</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="no_comment">
+        <text class="load_more_box">暂时没有评论！</text>
+      </view>
+    </scroll-view>
+  </view>
+ 
+  <!-- 评论 -->
+  <view class="comment_fixed_footer">
+    <view class="footer_oper_box">
+      <button open-type="share" class="btn">
+        <image src="../../imgs/send.png"></image>
+        <text>分享</text>
+      </button>
+ 
+      <view class="footer_c">
+        <view wx:if="{{collectByMp3IdAndUId.length>0}}">
+        <image catchtap='_onCollectTap' src="{{isCollected?'../../imgs/send.png':'../../imgs/send.png'}}"></image>
+        </view>
+        <view wx:elif="{{collectByMp3IdAndUId.length==0}}">
+        <image catchtap="onCollectTap" src="{{isCollected?'../../imgs/collect.png':'../../imgs/collect.png'}}"></image>
+         </view>
+        <text>收藏</text>
+      </view>
+    </view>
+ 
+    <navigator bindtap="add_ask_comment" hover-class="none">
+      <view class="post_comment_button">
+        <image src="../../imgs/message.png"></image>
+        <text>评论</text>
+      </view>
+    </navigator>
+  </view>
+ 
+  <!-- 弹出层 -->
+  <view class="cover_box" wx:if="{{showDialog}}" bindtap="toggleDialogHandle"></view>
+  <view class="overlay_box" wx:if="{{showDialog}}">
+    <view class="overlay_title">
+      <text>评论</text>
+      <image class="close_btn" src="../../imgs/message.png" mode="aspectFill" bindtap="toggleDialogHandle"></image>
+    </view>
+    <view wx:for="{{comment}}" wx:for-item="comment">
+      <view class="comment_info">
+        <view class="c_info_view">
+          <image src="{{comment.head_src}}"></image>
+          <text>{{comment.nick_name}}</text>
+        </view>
+        <text class="c_date_txt">{{comment.comment_time}}</text>
+      </view>
+      <view class="comment_content">{{comment.content}}</view>
+    </view>
+ 
+  </view>
+ 
+</view>

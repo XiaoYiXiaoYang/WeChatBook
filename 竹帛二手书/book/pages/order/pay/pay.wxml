@@ -1,0 +1,12 @@
+<view class='outer'>
+  <view class='orderdone'>
+    <image src='../../imgs/orderok.png'></image>
+    <text>下单成功！</text>
+  </view>
+  <view class='item' wx:for="{{order}}" wx:key="{{item.order_id}}">
+    请在24小时内完成支付！
+  <view class='getorderID'>订单号：{{item.order_id}}</view>
+  <view class='getorderprice'>订单金额：{{item.pre_price}} 元</view>
+  <button class='payan' bindtap='wxpay' type='primary'>微信支付</button>
+  </view>
+</view>

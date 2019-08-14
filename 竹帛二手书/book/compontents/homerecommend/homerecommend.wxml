@@ -1,0 +1,28 @@
+<!--compontents/homerecommend.wxml-->
+<view class="homeRecommend">最新发布</view>
+<view class="homeMark">给你主宰自己的力量</view>
+<view class="homeSwiper">
+  <swiper autoplay='true' interval='6000' circular='true' duration='500' previous-margin='rpx' next-margin='rpx'>
+    <block wx:key="{{books}}">
+      <navigator>
+        <swiper-item>
+          <view class='swiperBox'>
+            <form bindsubmit='saveFormId' report-submit='true' class='formClass'>
+              <button form-type='submit' class='formButton'>
+                <image src='{{item.image}}' mode='aspectFill'></image>
+              </button>
+            </form>
+            <view class='swiperDetail'>
+              <view class='title'>{{item.title}}</view>
+              <view class='author'>{{item.author}}</view>
+              <view class='allPrice'>
+                <view class='prePrice'>原价：{{item.prePrice}}</view>
+                <view class='price'>现价：{{item.price}}</view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+</view>

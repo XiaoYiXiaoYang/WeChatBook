@@ -1,0 +1,12 @@
+<view class='outer'>
+  <view wx:if = "{{payStatus}}" class='paysuccess'>
+      <text>支付成功</text>
+      <text bindtap='checkDetail'>查看订单详情</text>
+      <text bindtap='backToIndex'>继续购物</text>
+  </view>
+  <view wx:else class='payerror'>
+      <text>支付失败</text>
+      <text bindtap='backToList'>返回订单列表</text>
+      <text bindtap='backToIndex'>继续购物</text>
+  </view>
+</view>

@@ -1,0 +1,96 @@
+<!--pages/publish_book/input_book/input_book.wxml-->
+<view>
+  <view class='planA'>
+    <view class='search'>
+      <input type='text' placeholder='输入ISBN码' confirm-type='search' value='请输入ISBN码搜索书籍信息' bindinput='getISBN' bindconfirm='getbook'>
+      </input>
+        <view class='search_button'bindtap='getbook'>
+        <image class='pink_search' src='../../imgs/search.png' mode='asceptFit'>
+        </image>
+      </view>
+      <view class='sao' bindtap='getScanisbn'>
+        <image class='green_sao' src='../../imgs/sao.png' mode='asceptFit'>
+        </image>
+      </view>
+    </view>
+  </view>
+  <view class='planC'>
+    <view class='c_header'>
+      <view class='pen_write'>基本信息</view>
+    </view>
+    <view class='form_footer'>
+          <view class="page__bd">
+              <view class="weui-btn-area">
+                  
+                  <picker class="weui-btn" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+                      <button type="default">类型选择</button>
+                  </picker>
+                  
+              </view>
+          </view>
+
+        <view class='content'>
+        <view class='content_input'>
+          <label>书名</label>
+          <input type='text' placeholder='请输入书名' bindinput="get_book_name"></input>
+        </view>
+        <view class='content_input'>
+          <label>作者</label>
+          <input type='text' placeholder='请输入作者' bindinput="get_book_author"></input>
+        </view>
+        <view class='content_input'>
+          <label>原价</label>
+          <input type='text' placeholder='请输入本书原价' bindinput="get_ori_price"></input>
+        </view>
+        <view class='content_input'>
+          <label>售价</label>
+          <input type='text' placeholder='请输入出手价' bindinput="get_pre_price"></input>
+        </view>
+        <view class='content_input'>
+          <label>描述</label>
+          <input type='text' placeholder='请输入书籍详情' bindinput="get_description"></input>
+        </view>
+        <picker class="weui-btn" mode="selector" bindchange="pickChange" value="{{book.means}}" range="{{array}}">
+            <button type="deflault"  >取货方式选择</button>
+        </picker>
+        </view>
+        <label>上传图片</label>
+        <view class='image_uploader'>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                            <view class="weui-uploader__info">{{imn}}/2</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for="{{book.pics}}" wx:key="*this">
+                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" data-in="{{index}}" bindlongpress='dimage'/>
+                                    </view>
+                                </block>
+      
+                            </view>
+                            <view class="weui-uploader__input-box">
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='form_button'>
+          <view class='reset_button'>
+            <view class='button_detial'>
+              <image src='../../imgs/wawa1.png' mode='asceptFit'></image><text>重置</text>
+              </view>
+          </view>
+          <view class='submit_button'>
+            <view class='button_detial' bindtap="post_book">
+              <image src='../../imgs/wawa2.png' mode='asceptFit'></image><text>提交</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

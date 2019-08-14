@@ -1,0 +1,40 @@
+<view class='outer'>
+  <view class='nav'>
+    <text bindtap='tabClick' data-index='0' class='{{tabClass[0]}}'>全部</text>
+    <text bindtap='tabClick' data-index='1' class='{{tabClass[1]}}'>待付款</text>
+    <text bindtap='tabClick' data-index='2' class='{{tabClass[2]}}'>待发货</text>
+    <text bindtap='tabClick' data-index='3' class='{{tabClass[3]}}'>待收货</text>
+    <text bindtap='tabClick' data-index='4' class='{{tabClass[4]}}'>已完成</text>
+  </view>
+  <view class='orderList'>
+    <view wx:for = "{{orders}}" class='item' wx:key="{{item.order_id}}">
+      <view class='orderNum'>
+        订单号：{{item.order_id}}
+      </view>
+      <view class='goodsInfo' >
+        <image src='{{img_src}}{{item.img_src}}'></image>
+        <text>{{item.book_name}}</text>
+      </view>
+      <view class='footer'>
+        <view class='placeholder'></view>
+        <view class='btn' wx:if="{{item.order_state == 0}}">
+         <text class='cancel' bindtap='orderCancel' data-id="{{item.order_id}}">取消订单</text>
+         <text bindtap='paynow' data-index = "{{index}}" class='paynow'>立即付款</text>
+        </view>
+        <view class='btn' wx:elif="{{item.order_state == 1}}">
+         <text class='cancel'>待发货</text>
+        </view>
+        <view class='btn' wx:elif="{{item.order_state == 2}}">
+         <text class='paynow' bindtap='orderConfirm' data-id="{{item.order_id}}">确认收货</text>
+        </view>
+        <view class='btn' wx:elif="{{item.order_status == 3}}">
+         <text class='check'>查看订单</text>
+        </view>
+         <view class='btn' wx:else>
+         <text class='cancel'>订单已取消</text>
+        </view>
+        <text class='price'>总金额：{{item.pre_price}} 元</text>
+      </view>
+    </view>
+  </view>
+</view>

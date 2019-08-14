@@ -1,0 +1,31 @@
+.outer{
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  color: dimgrey;
+}
+.orderdone{
+  color: #4caf50;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding: 0 15%;
+}
+.orderdone image{
+  width: 26px;
+  height: 26px;
+}
+.item{
+  padding: 10px 15%;
+}
+.getorderID{
+  padding: 10px 15%;
+}
+.getorderprice{
+  padding: 10px 15%;
+}
+.payan{
+  width: 86%;
+  margin-top: 10px;
+}

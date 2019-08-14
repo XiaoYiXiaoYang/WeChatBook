@@ -1,0 +1,17 @@
+.outer{
+  margin-top: 20px;
+}
+.paysuccess{
+  color: #4caf50;
+  padding-left: 20%;
+}
+.paysuccess text{
+  display: block;
+}
+.payerror{
+  color: crimson;
+  padding-left: 20%;
+}
+.payerror text{
+  display: block;
+}

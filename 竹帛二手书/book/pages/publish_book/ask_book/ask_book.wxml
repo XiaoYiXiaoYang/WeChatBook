@@ -1,0 +1,43 @@
+<!--pages/publish_book/ask_book/ask_book.wxml-->
+<view class='by'>
+  <view class='title'>
+    <input type='text' placeholder='输入标题..'bindinput='get_title'></input>
+  </view>
+  <view class='sccv'>
+    <textarea placeholder='输入内容..' minlength="{{min}}" maxlength="{{max}}" class='scct'  bindinput='inp'></textarea>
+    <text class='scm' >{{texts}}</text>
+    <text class='ctn' >{{currentWordNumber}}/{{max}}</text>
+  </view>
+  <view class='ctit' >上传图片<text>（长按图片删除）</text></view>
+  <view class='image_uploader'>
+      <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                  <view class="weui-uploader__hd">
+                      <view class="weui-uploader__info"><text >{{imn}}/{{immax}}</text>
+                      </view>
+                  </view>
+                  <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                          <block wx:for="{{ask.pics}}" wx:key="*this">
+                              <view class="weui-uploader__file" id="{{item}}" bindtap="previewImage">
+                                  <image class="weui-uploader__img" data-in="{{index}}" src="{{item}}" mode="widthFix" bindlongpress='dimage' />
+                              </view>
+                          </block>
+
+                      </view>
+                      <view class="weui-uploader__input-box">
+                          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+  <view style='background:white;font-size: 30rpx;color: #03bc03;padding:0 0 0 2%;'>{{em}}</view>
+<view class='view_buttons'>
+  <button class='button button-highlight button-box button-giant button-longshadow-right button-longshadow-expand' bindtap='publish'>
+    发布
+  </button>
+</view>
+</view>

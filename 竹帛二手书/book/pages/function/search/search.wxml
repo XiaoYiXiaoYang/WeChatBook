@@ -1,0 +1,31 @@
+<view class='section'>
+<view class='header'>
+  <view class='title'>
+    <navigator url=''>
+      <text class='txt'>查询结果</text>
+    </navigator>
+  </view>
+</view>
+<view class='body'>
+  <view class='item' wx:for="{{books}}">
+    <navigator bindtap="show_book_info" data-index = "{{index}}">
+      <image class='image'src='{{image_url}}{{item.img_src}}'></image>
+      <view class='detail'>
+          <view class='detailHeader'>
+            <view class="title">{{item.book_name}}</view>
+            <view class="signBox">
+              <sign color="#a78845" leftText="类型" rightText="{{item.type}}"></sign>
+            </view>
+          </view>
+          <view class='detailBoay'>
+            <view class='author'>{{item.book_author}}</view>
+            <view class='allPrice'>
+              <view class="prePrice">{{item.ori_rice}}</view>
+              <view class="price">{{item.pre_price}}</view>
+            </view>
+          </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+</view>

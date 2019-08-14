@@ -1,0 +1,320 @@
+//comment.wxss
+/* 播放器 */
+ 
+.player video {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+.book_image_swiper{
+  width: 650rpx;
+  height: 650rpx;
+}
+.book_image_swiper image{
+  width:650rpx;
+  height:450rpx;
+}
+
+/*诗词标题、作者*/
+ 
+.main {
+  position: fixed;
+  left: 0;
+  top: 425rpx;
+  right: 750rpx;
+  bottom: 100rpx;
+}
+ 
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 20rpx 0rpx 20rpx;
+  margin-top: 20rpx;
+}
+ 
+.title {
+  display: inline-block;
+  color: #1f96f2;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+ 
+.author, .discription, .comment {
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #222;
+}
+ 
+/*诗词信息显示排版*/
+ 
+.photo_info_box {
+  padding: 20rpx 50rpx;
+}
+ 
+.author_box {
+  position: relative;
+  height: 80rpx;
+}
+ 
+.author_info_view {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+ 
+.author_info_view image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+ 
+.author_info_view text {
+  margin-left: 20rpx;
+}
+ 
+.author_date_txt {
+  position: absolute;
+  right: 0;
+  color: #999;
+  height: 37rpx;
+  top: 22rpx;
+}
+ 
+.photo_summary_txt {
+  height: 80rpx;
+  line-height: 40rpx;
+  margin: 20rpx 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+ 
+.photo_tags_box {
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+ 
+.tags {
+  position: relative;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-right: 25rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  float: left;
+}
+ 
+.tags::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 6rpx;
+  height: 100%;
+  background-color: #ff5167;
+  border-top-left-radius: 6rpx;
+  border-bottom-left-radius: 6rpx;
+}
+ 
+.photo_comment_box {
+  border-top: 1rpx solid rgb(206, 206, 206);
+  overflow: hidden;
+  padding-top: 20rpx;
+}
+ 
+.photo_comment_title {
+  width: 112rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+ 
+.comment_info {
+  position: relative;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+ 
+.c_info_view {
+  display: flex;
+  align-items: center;
+}
+ 
+.c_info_view image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+ 
+.c_info_view text {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+ 
+.c_date_txt {
+  position: absolute;
+  right: 0;
+  top: 12rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+ 
+.comment_content {
+  line-height: 40rpx;
+  margin: 20rpx 0 0 80rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid rgb(206, 206, 206);
+}
+ 
+.no_comment {
+  margin-top: 250rpx;
+  text-align: center;
+}
+ 
+.load_more_box {
+  width: 168rpx;
+  height: 40rpx;
+  padding: 21rpx 67rpx;
+  border-radius: 45rpx;
+  margin: 27rpx auto;
+  text-align: center;
+  border: 2rpx solid rgb(206, 206, 206);
+}
+ 
+.comment_fixed_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 110rpx;
+  background-color: #f5f5f5;
+  z-index: 1;
+}
+ 
+.footer_oper_box {
+  width: 58%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+ 
+button::after {
+  border: none;
+}
+ 
+.btn {
+  display: flex;
+  margin-right: 30rpx;
+  background-color: #f5f5f5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.btn image {
+  width: 48rpx;
+  height: 48rpx;
+ 
+}
+ 
+.btn text {
+  margin-left: 30rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+ 
+.footer_c {
+  display: flex;
+   margin-right: 15rpx;
+}
+ 
+.footer_c image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 15rpx;
+}
+ 
+.footer_c text {
+  margin-right: 15rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+ 
+.post_comment_button {
+  width: 42%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #ff5167;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+ 
+.post_comment_button image {
+  width: 64rpx;
+  height: 64rpx;
+}
+ 
+.post_comment_button text {
+  color: snow;
+  margin-left: 14rpx;
+  font-size: 36rpx;
+}
+ 
+/* 查看更多评论 */
+ 
+.cover_box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+ 
+.overlay_box {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  padding: 30rpx 40rpx;
+  height: 800rpx;
+  background-color: #f5f5f5;
+  bottom: 0;
+  overflow: scroll;
+}
+ 
+.overlay_title {
+  position: relative;
+  height: 48rpx;
+}
+ 
+.overlay_title text {
+  font-size: 34rpx;
+}
+ 
+.overlay_title image {
+  position: absolute;
+  right: 0;
+  width: 36rpx;
+  height: 36rpx;
+  top: 6rpx;
+}
+ 
+.textarea_box {
+  height: 213rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid rgb(206, 206, 206);
+  margin-top: 30rpx;
+  overflow: hidden;
+}

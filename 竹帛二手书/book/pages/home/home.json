@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "homerecommend": "/compontents/homerecommend/homerecommend",
+    "homeHot": "/compontents/homeHot/homeHot"
+  }
+}

@@ -1,0 +1,54 @@
+<!--pages/publish/publish.wxml-->
+<view class='header'>
+<view class='image-box'>
+  <scroll-view class="image-group" scroll-x="true">
+    <image src='../imgs/public_scroll1.jpg'></image>
+    <image src='../imgs/public_scroll2.jpg'></image>
+    <image src='../imgs/public_scroll3.jpg'></image>
+  </scroll-view>
+</view>
+<view class='process'>
+  <view class='process_header'>
+    <view class='process_cell'>
+      <view class='process_icon'>
+        <image src='../imgs/process1.png' mode='aspectFit'></image>
+      </view>
+      <view class='process_detail'>书籍信息上传</view>
+    </view>
+    <view class='arrow'>
+      <image src='../imgs/arrow.png' mode='aspectFit'></image>
+    </view>
+    <view class='process_cell'>
+      <view class='process_icon'><image src='../imgs/process2.png' mode='aspectFit'></image></view>
+      <view class='process_detail'>双方协商交易中……</view>
+    </view>
+    <view class='arrow'>
+      <image src='../imgs/arrow.png' mode='aspectFit'></image>
+    </view>
+    <view class='process_cell'>
+      <view class='process_icon'>
+        <image src='../imgs/process3.png' mode='aspectFit'></image></view>
+      <view class='process_detail'>交易成功结束</view>
+    </view>
+  </view>
+  <view class='process_footer'>
+    <view class='process_footer_text'>
+      本平台讲究诚心，已分享为乐
+    </view>
+    <view class='process_footer_button'>
+      <button class='more'>更多交易规则></button>
+    </view>
+  </view>
+</view>
+</view>
+<view class='footer'>
+<view class='view_buttons'>
+  <button class='button button-action button-box button-giant button-longshadow-left' bindtap='ask'>
+    求得二手好书
+  </button>
+  <button class='button button-highlight button-box button-giant button-longshadow-right button-longshadow-expand' bindtap='publish'>
+    发布闲置书籍
+  </button>
+</view>
+</view>
+
